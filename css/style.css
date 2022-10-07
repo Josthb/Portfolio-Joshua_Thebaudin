@@ -1,0 +1,284 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;700&display=swap'); /*importation des polices d'écritures*/
+
+:root { /*Ici on définit les couleurs des différentes variables que j'utilise dans le code*/
+    --primary: rgba(233, 199, 10, 0.933);
+    --dark: #21252f;
+    --body: #888;
+    --box-shadow: 0 8px 22px rgba(0,0,0,0.1);
+}
+
+body {
+    font-family: Sora, "sans-serif";
+    line-height: 1.7;
+    color: var(--body);
+    overflow-x: hidden; /*Je cache la barre de scroll horizontale*/
+      
+}
+
+h1,h2,h3,h4,h5,h6,
+.display-4 { /*taille des titres*/
+    color: var(--dark);
+    font-weight: 700;
+}
+
+a {
+    color: var(--dark);
+    text-decoration: none; /*aucune décoration*/
+}
+
+img {
+    width: 100%;
+}
+
+.navbar {
+    box-shadow: var(--box-shadow); /*box shadow permet de projeter une ombre derrière l'élement*/
+}
+
+.navbar .logo {
+    width: 100px;
+}
+
+.navbar .nav-link {
+    font-size: 15px;
+    font-weight: 700;
+
+}
+
+.hero {
+    background-image: url(../img/circles.gif);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+    z-index: 2; /*définit la "couche" où l'élement et ce qui en découle sont positionés*/
+}
+
+.hero::after { /*crée un pseudo-élément qui sera le dernier enfant de l'élément sélectionné.*/
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color:rgba(0,0, 0, 0.0.75);
+    z-index: -1;
+
+}
+
+
+section{ /*permet de mettre en place les écarts entre les sections*/
+    padding-top: 120px;
+    padding-bottom: 120px;
+    
+}
+
+.card-effect {
+    box-shadow: var(--box-shadow);
+    background-color: white;
+    padding: 25px;
+    transition: all 0.35s ease;
+}
+
+.card-effect:hover {
+    box-shadow: none;
+    transform: translateY(5px);
+}
+
+.iconbox {
+    width: 54px;
+    height: 54px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary);
+    color: white;
+    font-size: 32px;
+    border-radius: 100px;
+}
+
+.competences {
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.competences::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: -100%;
+    left: 0;
+    background-color: var(--primary);
+    z-index: -1;
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+.competences:hover .iconbox {
+    background-color: white;
+    color: var(--primary);
+}
+
+.competences:hover h5,
+.competences:hover p {
+    color: white;
+}
+
+.competences:hover::after {
+    opacity: 1;
+    top: 0;
+}
+
+.projet {
+    position:relative;
+    overflow: hidden;
+}
+
+.projet .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary);
+    padding: 30px;
+    display: flex;
+    align-items: flex-end;
+    transition: all 0.4s ease;
+    opacity: 0;
+}
+
+.projet img {
+    transition: all 0.4s ease;
+
+}
+
+.projet:hover  .overlay{
+    opacity: 1.90;
+}
+
+.projet:hover img {
+    transform: scale(1.1);
+}
+
+form input.form-control {
+    height: 56px;
+
+}
+
+
+.footer-top {
+    padding-bottom: 90px;
+    padding: 90px;
+    background-color: black;
+}
+
+.footer-top a {
+    color: var(--body)
+}
+
+.footer-top a:hover {
+    color: white;
+}
+
+.projet {
+    position:relative;
+    overflow: hidden;
+}
+
+.projet .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary);
+    padding: 30px;
+    display: flex;
+    align-items: flex-end;
+    transition: all 0.4s ease;
+    opacity: 0;
+    text-align: center;
+}
+
+.projet img {
+    transition: all 0.4s ease;
+
+}
+
+.projet:hover  .overlay{
+    opacity: 0.80;
+}
+
+.projet:hover img {
+    transform: scale(1.1);
+}
+
+form input.form-control {
+    height: 56px;
+
+}
+
+
+.footer-top {
+    padding-bottom: 90px;
+    padding: 90px;
+    background-color: black;
+}
+
+.footer-top a {
+    color: var(--body)
+}
+
+.footer-top a:hover {
+    color: white;
+}
+/*#pblanc{
+    color: white;
+}
+#heromarvel{
+    background-color: black
+}
+#intro3
+{
+    
+    width: 450px;
+    height: 650px;
+
+}*/
+
+.lienveille{
+    color:black;
+    font-weight: bold;
+}
+
+.alien{
+
+   text-transform: uppercase;
+  background-image: linear-gradient(
+    -225deg,
+    #f2da00 0%,
+    #dcd4e5 29%,
+    #161012 67%,
+    #e5ff00 100%
+  );
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  text-emphasis-color: transparent;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 2s linear infinite;
+  display: inline-block;
+      font-size: 50px;
+}
+
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
