@@ -282,3 +282,61 @@ form input.form-control {
   }
 }
 
+
+#imgQuincespal{
+    border-radius : 5px 5px 5px 5px;
+    
+}
+
+#imgSilent{
+    height: 200px;
+    width: 200px;
+}
+
+#pQuincespal{
+    font-size: 15px;
+    font-weight: bold;
+    color: black;
+    padding-top: 25px;
+}
+
+#btn_glo{
+    padding: 35px;
+   
+    justify-content: center;
+    align-items: center;
+    
+   
+
+    
+}
+
+#btnQuincespal {
+    background-color: var(--primary);
+    color: white;
+    font-weight: bold;
+    border-radius: 5px 5px 5px 5px;
+    transition:  all 0.5s ease;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+#btnQuincespal:hover {
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    border-radius: 5px 5px 5px 5px;
+}
+    
+
+
+#tableauref{
+    padding-top: 50px;
+}
+
+#lienretour{
+    color: black;
+    font-weight: bold;
+    padding-top: 50px;
+}
+
