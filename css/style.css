@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;700&display=swap'); /*importation des polices d'écritures*/
 
+
+
+
+
 :root { /*Ici on définit les couleurs des différentes variables que j'utilise dans le code*/
     --primary: rgba(233, 199, 10, 0.933);
     --dark: #21252f;
