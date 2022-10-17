@@ -30,6 +30,12 @@ a {
     text-decoration: none; /*aucune décoration*/
 }
 
+li{
+    list-style: none; /*pas de liste*/
+}
+
+
+
 img {
     width: 100%;
 }
@@ -344,3 +350,13 @@ form input.form-control {
     padding-top: 50px;
 }
 
+#lienretour:hover{
+    color: var(--primary);
+    font-weight: bold;
+    padding-top: 50px;
+}
+
+
+#htable{
+    color: var(--primary);
+}
