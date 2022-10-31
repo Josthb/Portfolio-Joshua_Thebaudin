@@ -311,10 +311,20 @@ form input.form-control {
 }
 
 #btn_glo{
-    padding: 35px;
+    
+
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
    
-    justify-content: center;
-    align-items: center;
+    padding: 10px 20px;
+    
+    border-radius: 5px;
+   
+
+
     
    
 
