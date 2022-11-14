@@ -308,6 +308,8 @@ form input.form-control {
     font-weight: bold;
     color: black;
     padding-top: 25px;
+    
+    
 }
 
 #btn_glo{
@@ -369,4 +371,18 @@ form input.form-control {
 
 #htable{
     color: var(--primary);
+}
+
+
+
+
+
+.containerCarou{
+    padding-top: 50px;
+    padding-bottom: 50px;
+   
+}
+
+.rowCarou{
+    border-radius: 5px 5px 5px 5px;
 }
