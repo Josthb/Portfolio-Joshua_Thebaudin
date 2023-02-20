@@ -1,271 +1,251 @@
-@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;700&display=swap'); /*importation des polices d'écritures*/
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@400;700&display=swap"); /*importation des polices d'écritures*/
 
-
-
-
-
-:root { /*Ici on définit les couleurs des différentes variables que j'utilise dans le code*/
-    --primary: rgba(233, 199, 10, 0.933);
-    --dark: #21252f;
-    --body: #888;
-    --box-shadow: 0 8px 22px rgba(0,0,0,0.1);
+:root {
+  /*Ici on définit les couleurs des différentes variables que j'utilise dans le code*/
+  --primary: rgba(233, 199, 10, 0.933);
+  --dark: #21252f;
+  --body: #888;
+  --box-shadow: 0 8px 22px rgba(0, 0, 0, 0.1);
 }
 
 body {
-    font-family: Sora, "sans-serif";
-    line-height: 1.7;
-    color: var(--body);
-    overflow-x: hidden; /*Je cache la barre de scroll horizontale*/
-      
+  font-family: Sora, "sans-serif";
+  line-height: 1.7;
+  color: var(--body);
+  overflow-x: hidden; /*Je cache la barre de scroll horizontale*/
 }
 
-h1,h2,h3,h4,h5,h6,
-.display-4 { /*taille des titres*/
-    color: var(--dark);
-    font-weight: 700;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.display-4 {
+  /*taille des titres*/
+  color: var(--dark);
+  font-weight: 700;
 }
 
 a {
-    color: var(--dark);
-    text-decoration: none; /*aucune décoration*/
+  color: var(--dark);
+  text-decoration: none; /*aucune décoration*/
 }
 
-li{
-    list-style: none; /*pas de liste*/
+li {
+  list-style: none; /*pas de liste*/
 }
-
-
 
 img {
-    width: 100%;
+  width: 100%;
 }
 
 .navbar {
-    box-shadow: var(--box-shadow); /*box shadow permet de projeter une ombre derrière l'élement*/
+  box-shadow: var(
+    --box-shadow
+  ); /*box shadow permet de projeter une ombre derrière l'élement*/
 }
 
 .navbar .logo {
-    width: 100px;
+  width: 100px;
 }
 
 .navbar .nav-link {
-    font-size: 15px;
-    font-weight: 700;
-
+  font-size: 15px;
+  font-weight: 700;
 }
 
 .hero {
-    background-image: url(../img/circles.gif);
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-    position: relative;
-    z-index: 2; /*définit la "couche" où l'élement et ce qui en découle sont positionés*/
+  background-image: url(../img/circles.gif);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  z-index: 2; /*définit la "couche" où l'élement et ce qui en découle sont positionés*/
 }
 
-.hero::after { /*crée un pseudo-élément qui sera le dernier enfant de l'élément sélectionné.*/
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color:rgba(0,0, 0, 0.0.75);
-    z-index: -1;
-
+.hero::after {
+  /*crée un pseudo-élément qui sera le dernier enfant de l'élément sélectionné.*/
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: -1;
 }
 
-
-section{ /*permet de mettre en place les écarts entre les sections*/
-    padding-top: 120px;
-    padding-bottom: 120px;
-    
+section {
+  /*permet de mettre en place les écarts entre les sections*/
+  padding-top: 120px;
+  padding-bottom: 120px;
 }
 
 .card-effect {
-    box-shadow: var(--box-shadow);
-    background-color: white;
-    padding: 25px;
-    transition: all 0.35s ease;
+  box-shadow: var(--box-shadow);
+  background-color: white;
+  padding: 25px;
+  transition: all 0.35s ease;
 }
 
 .card-effect:hover {
-    box-shadow: none;
-    transform: translateY(5px);
+  box-shadow: none;
+  transform: translateY(5px);
 }
 
 .iconbox {
-    width: 54px;
-    height: 54px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--primary);
-    color: white;
-    font-size: 32px;
-    border-radius: 100px;
+  width: 54px;
+  height: 54px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary);
+  color: white;
+  font-size: 32px;
+  border-radius: 100px;
 }
 
 .competences {
-    position: relative;
-    z-index: 2;
-    overflow: hidden;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
 }
 
 .competences::after {
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: -100%;
-    left: 0;
-    background-color: var(--primary);
-    z-index: -1;
-    opacity: 0;
-    transition: all 0.4s ease;
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: -100%;
+  left: 0;
+  background-color: var(--primary);
+  z-index: -1;
+  opacity: 0;
+  transition: all 0.4s ease;
 }
 
 .competences:hover .iconbox {
-    background-color: white;
-    color: var(--primary);
+  background-color: white;
+  color: var(--primary);
 }
 
 .competences:hover h5,
 .competences:hover p {
-    color: white;
+  color: white;
 }
 
 .competences:hover::after {
-    opacity: 1;
-    top: 0;
+  opacity: 1;
+  top: 0;
 }
 
 .projet {
-    position:relative;
-    overflow: hidden;
+  position: relative;
+  overflow: hidden;
 }
 
 .projet .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--primary);
-    padding: 30px;
-    display: flex;
-    align-items: flex-end;
-    transition: all 0.4s ease;
-    opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary);
+  padding: 30px;
+  display: flex;
+  align-items: flex-end;
+  transition: all 0.4s ease;
+  opacity: 0;
 }
 
 .projet img {
-    transition: all 0.4s ease;
-
+  transition: all 0.4s ease;
 }
 
-.projet:hover  .overlay{
-    opacity: 1.90;
+.projet:hover .overlay {
+  opacity: 1.9;
 }
 
 .projet:hover img {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 form input.form-control {
-    height: 56px;
-
+  height: 56px;
 }
 
-
 .footer-top {
-    padding-bottom: 90px;
-    padding: 90px;
-    background-color: black;
+  padding-bottom: 90px;
+  padding: 90px;
+  background-color: black;
 }
 
 .footer-top a {
-    color: var(--body)
+  color: var(--body);
 }
 
 .footer-top a:hover {
-    color: white;
+  color: white;
 }
 
 .projet {
-    position:relative;
-    overflow: hidden;
+  position: relative;
+  overflow: hidden;
 }
 
 .projet .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--primary);
-    padding: 30px;
-    display: flex;
-    align-items: flex-end;
-    transition: all 0.4s ease;
-    opacity: 0;
-    text-align: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary);
+  padding: 30px;
+  display: flex;
+  align-items: flex-end;
+  transition: all 0.4s ease;
+  opacity: 0;
+  text-align: center;
 }
 
 .projet img {
-    transition: all 0.4s ease;
-
+  transition: all 0.4s ease;
 }
 
-.projet:hover  .overlay{
-    opacity: 0.80;
+.projet:hover .overlay {
+  opacity: 0.8;
 }
 
 .projet:hover img {
-    transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 form input.form-control {
-    height: 56px;
-
+  height: 56px;
 }
 
-
 .footer-top {
-    padding-bottom: 90px;
-    padding: 90px;
-    background-color: black;
+  padding-bottom: 90px;
+  padding: 90px;
+  background-color: black;
 }
 
 .footer-top a {
-    color: var(--body)
+  color: var(--body);
 }
 
 .footer-top a:hover {
-    color: white;
-}
-/*#pblanc{
-    color: white;
-}
-#heromarvel{
-    background-color: black
-}
-#intro3
-{
-    
-    width: 450px;
-    height: 650px;
-
-}*/
-
-.lienveille{
-    color:black;
-    font-weight: bold;
+  color: white;
 }
 
-.alien{
+.lienveille {
+  color: black;
+  font-weight: bold;
+}
 
-   text-transform: uppercase;
+.alien {
+  text-transform: uppercase;
   background-image: linear-gradient(
     -225deg,
     #f2da00 0%,
@@ -283,7 +263,7 @@ form input.form-control {
   -webkit-text-fill-color: transparent;
   animation: textclip 2s linear infinite;
   display: inline-block;
-      font-size: 50px;
+  font-size: 50px;
 }
 
 @keyframes textclip {
@@ -292,97 +272,85 @@ form input.form-control {
   }
 }
 
-
-#imgQuincespal{
-    border-radius : 5px 5px 5px 5px;
-    
+#imgQuincespal {
+  border-radius: 5px 5px 5px 5px;
 }
 
-#imgSilent{
-    height: 200px;
-    width: 200px;
+#imgSilent {
+  height: 200px;
+  width: 200px;
 }
 
-#pQuincespal{
-    font-size: 15px;
-    font-weight: bold;
-    color: black;
-    padding-top: 25px;
-    
-    
+#pQuincespal {
+  font-size: 15px;
+  font-weight: bold;
+  color: black;
+  padding-top: 25px;
 }
 
-#btn_glo{
-    
+#btn_glo {
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+  padding: 10px 20px;
 
-   
-    padding: 10px 20px;
-    
-    border-radius: 5px;
-   
-
-
-    
-   
-
-    
+  border-radius: 5px;
 }
 
 #btnQuincespal {
-    background-color: var(--primary);
-    color: white;
-    font-weight: bold;
-    border-radius: 5px 5px 5px 5px;
-    transition:  all 0.5s ease;
-    padding: 10px;
-    margin-top: 10px;
+  background-color: var(--primary);
+  color: white;
+  font-weight: bold;
+  border-radius: 5px 5px 5px 5px;
+  transition: all 0.5s ease;
+  padding: 10px;
+  margin-top: 10px;
 }
 
 #btnQuincespal:hover {
-    background-color: white;
-    color: black;
-    font-weight: bold;
-    border-radius: 5px 5px 5px 5px;
-}
-    
-
-
-#tableauref{
-    padding-top: 50px;
+  background-color: white;
+  color: black;
+  font-weight: bold;
+  border-radius: 5px 5px 5px 5px;
 }
 
-#lienretour{
-    color: black;
-    font-weight: bold;
-    padding-top: 50px;
+#tableauref {
+  padding-top: 50px;
 }
 
-#lienretour:hover{
-    color: var(--primary);
-    font-weight: bold;
-    padding-top: 50px;
+#lienretour {
+  color: black;
+  font-weight: bold;
+  padding-top: 50px;
 }
 
-
-#htable{
-    color: var(--primary);
+#lienretour:hover {
+  color: var(--primary);
+  font-weight: bold;
+  padding-top: 50px;
 }
 
-
-
-
-
-.containerCarou{
-    padding-top: 50px;
-    padding-bottom: 50px;
-   
+#htable {
+  color: var(--primary);
 }
 
-.rowCarou{
-    border-radius: 5px 5px 5px 5px;
+.containerCarou {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.rowCarou {
+  border-radius: 5px 5px 5px 5px;
+}
+
+#imgProject {
+  width: 400px;
+  height: 250px;
+  object-fit: contain;
+}
+
+#stage {
+  padding-top: 40px;
 }
