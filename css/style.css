@@ -346,15 +346,22 @@ form input.form-control {
 }
 
 #imgProject {
-  width: 300px;
-  height: 250px;
+  width: 350px;
+  height: 200px;
   object-fit: contain;
 }
 
 #stage {
-  padding-top: 40px;
+  padding-top: 30px;
+}
+
+#imgProject2 {
+  width: 350px;
+  height: 200px;
+  object-fit: contain;
 }
 
 #pLangues {
-  padding-top: 22px;
+  padding-top: 8px;
+  padding-bottom: 17px;
 }
